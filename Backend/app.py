@@ -11,15 +11,9 @@ DATABASE = 'skill_tracker.db'
 
 # Define your core skills here (MUST MATCH init_db.py and Frontend)
 CORE_SKILLS = [
-    "LLM Evaluation", 
-    "LLM Fine Tuning", 
-    "LLM Agents", 
-    "RAG", 
-    "LLM Deployment", 
-    "POC Development", 
-    "Offensive LLM Agents", 
-    "LLM Red teaming"
+    "Python", "JavaScript", "HTML", "CSS", "SQL",
 ]
+
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE)
