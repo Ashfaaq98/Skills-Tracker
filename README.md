@@ -165,4 +165,4 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 
 ## Contact
 
-Created by Ashfaaq98. For questions or feedback, reach out at [your-email@example.com](mailto:your-email@example.com).
+Created by Ashfaaq98. For questions or feedback, reach out at [ashfaaqf@proton.me](mailto:ashfaaqf@proton.me).
