@@ -1,0 +1,41 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: skill-tracker-backend
+    ports:
+      - "5000:5000" # Expose backend on host port 5000
+    volumes:
+      - ./backend_data:/app/data # Persist SQLite database
+      # The skill_tracker.db will be created inside /app by app.py
+      # To ensure it's in a specific subfolder for the volume, adjust DATABASE path in app.py
+      # e.g., DATABASE = 'data/skill_tracker.db'
+      # For now, assuming skill_tracker.db is in /app
+      - ./backend/skill_tracker.db:/app/skill_tracker.db # Direct mount if db is in /app
+    restart: unless-stopped
+    networks:
+      - skill-tracker-net
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # This is where the React app learns how to reach the backend
+        REACT_APP_API_URL: http://backend:5000
+    container_name: skill-tracker-frontend
+    ports:
+      - "3000:80" # Expose frontend (Nginx) on host port 3000
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - skill-tracker-net
+
+volumes:
+  backend_data: # Defines the named volume for persistent data
+
+networks:
+  skill-tracker-net:
+    driver: bridge
