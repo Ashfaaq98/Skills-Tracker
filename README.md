@@ -1,6 +1,6 @@
 # Skills Tracker
 
-A full-stack web application to record, visualize, and monitor skill progress over time. Designed as a simple, extendable project built with Python (Flask), SQLite, Docker, and a React front end using Chart.js.
+A full-stack web application to record, visualize, and monitor skill progress over time. Designed as a simple, extendable project built with Python (Flask), SQLite, Docker, and a React front end.
 
 ## Table of Contents
 
@@ -23,17 +23,11 @@ A full-stack web application to record, visualize, and monitor skill progress ov
 ## Features
 
 * Create and track custom skills with timestamped entries
-* Interactive charts to visualize progress (line/bar charts)
+* Interactive charts to visualize progress
 * CORS-enabled Flask REST API
 * Easy local setup with SQLite or Docker Compose
 * Modular codebase for quick extensions
 
-## Tech Stack
-
-* **Backend:** Python, Flask, Flask-CORS
-* **Database:** SQLite
-* **Frontend:** React, Chart.js, react-chartjs-2, Axios
-* **Containerization (optional):** Docker, Docker Compose
 
 ## Prerequisites
 
@@ -60,7 +54,7 @@ A full-stack web application to record, visualize, and monitor skill progress ov
 3. Install Python dependencies:
 
    ```bash
-   pip install Flask flask-cors
+   pip install -r requirements.txt
    ```
 4. Initialize the database:
 
@@ -92,22 +86,11 @@ A full-stack web application to record, visualize, and monitor skill progress ov
    ```
 4. Frontend will run on `http://localhost:3000`, connecting to the backend at `http://localhost:5000`.
 
-### Docker Setup (Optional)
-
-1. Build and run containers:
-
-   ```bash
-   docker-compose up --build
-   ```
-2. Services:
-
-   * **api:** Flask backend on port 5000
-   * **frontend:** React app on port 3000
 
 ## Usage
 
 * Access the React UI at `http://localhost:3000`.
-* Use the form to add new skill entries with date, name, and level.
+* Use the form to add new project entries with date, name, and level.
 * View your skill progression in dynamic charts.
 
 ## Database Initialization
@@ -125,39 +108,25 @@ CREATE TABLE entries (
 
 Run `python init_db.py` before starting the API.
 
-## API Endpoints
 
-* `GET /entries` — List all entries
-* `POST /entries` — Add a new entry
-* `DELETE /entries/:id` — Remove an entry by ID
-
-Example POST payload:
-
-```json
-{
-  "skill_name": "Python",
-  "skill_level": 5
-}
-```
 
 ## Project Structure
 
 ```
 Skills-Tracker/
 ├── Backend/
-│   ├── app.py        # Flask app and routes
-│   ├── init_db.py    # DB schema creation
-│   └── requirements.txt
+│   ├── app.py       
+│   ├── init_db.py    
+│   
 ├── frontend/
 │   ├── public/
-│   └── src/          # React components, chart logic
+│   └── src/          
 ├── docker-compose.yml
-└── README.md         # <- you are here
+├── requirements.txt
+└── README.md         
+
 ```
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and open a pull request with descriptive commits.
 
 ## License
 
@@ -165,4 +134,4 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 
 ## Contact
 
-Created by Ashfaaq98. For questions or feedback, reach out at [ashfaaqf@proton.me](mailto:ashfaaqf@proton.me).
+Created by Ashfaaq. For questions or feedback, reach out at [ashfaaqf@proton.me](mailto:ashfaaqf@proton.me).
