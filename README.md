@@ -47,14 +47,6 @@ The application will be available at:
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:5000
 
-## API Reference
-
-| Endpoint | Method | Description | Payload |
-|----------|--------|-------------|---------|
-| `/skills` | GET | Get all skill scores | - |
-| `/projects` | GET | List all projects | - |
-| `/projects` | POST | Create project | `{"title": "string", "skills": ["string"], "details": "string"}` |
-| `/health` | GET | Check API health | - |
 
 ## Development
 

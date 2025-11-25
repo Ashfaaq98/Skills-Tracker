@@ -1,3 +1,93 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+.venv/
+venv/
+myenv/
+env/
+ENV/
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+sdist/
+*.sqlite3
+.mypy_cache/
+.pytest_cache/
+.tox/
+.coverage
+coverage/
+
+# Flask / Django instance and local env
+*.env
+.env
+.env.*.local
+instance/
+
+# Node / frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+/.pnp
+.pnp.js
+/.parcel-cache
+/.next
+/.nuxt
+dist/
+build/
+public/build/
+
+# React local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Hugo / static site
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Docker
+.dockerignore
+.env.*
+docker-compose.override.yml
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Thumbnails
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS generated files
+*.swp
+*~
+
+# Generated site / build artifacts
+/public/
+
+# Misc
+*.pem
+*.key
 # Byte-compiled / optimized / DLL files
 __pycache__/*
 *.py[cod]
